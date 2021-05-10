@@ -45,3 +45,8 @@ https://devdocs.io/
 ```
 img src="https://img.favpng.com/24/24/25/mr-bean-cartoon-animated-series-television-show-png-favpng-2GXPHPhZfgcdw8uw6YFj9Q9gY.jpg" alt = Mr Bean Photo">
 ```
+
+- Inserting Links
+```
+<a href="url"> Name </a>
+```
