@@ -6,7 +6,7 @@ Pandas deals with 3 types of data:
 2. Dataframe
 3. Panel
 
-#### Series
+### Series
 
 It is 1d array like structure with homogenous data. Size of series is fixed, value are mutable.
 
@@ -112,11 +112,43 @@ It is a 2d data structure, used to store data in tabular form (rows & columns). 
   
   ### Deletion of rows
   df = df.drop(0)
+  
   ```
 
-  #### Panel
+  ### Panel
+
+  It is a 3D container of data. **SYNTAX: pandas.Panel(data, items, major_axis, minor_axis, dtype, copy)**
+
+- Creating empty panel
+
+  ```
+  p = pd.Panel()
+  ```
+
+- Selecting data from Panel
+
+  1. Using items
+  2. Using Major_axis
+  3. Using Minor_axis
+
+  ```
+  # creating an empty panel
+  import pandas as pd
+  import numpy as np
+  data = {'Item1' : pd.DataFrame(np.random.randn(4, 3)), 
+     'Item2' : pd.DataFrame(np.random.randn(4, 2))}
+     
+  ### Using Items
+  p = pd.Panel(data)
+  print p['Item1']
+  
+  ### Using major axis
+  p = pd.Panel(data)
+  print p.minor_xs(1)
+     
+  ### Using minor axis
+  p = pd.Panel(data)
+  print p.minor_xs(1)
+  ```
 
   
-
-
-
