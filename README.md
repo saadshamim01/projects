@@ -15,6 +15,12 @@ Link: [here](https://github.com/saadshamim01/udacity-deep-reinforcement-learning
 - [Explore Close Approaches for Near-Earth Objects](https://github.com/saadshamim01/udacity-near-earth-objects)
 - [Meme Generator](https://github.com/saadshamim01/udacity-meme-generator)
 
+### Udacity Full Stack Web Developer Nanodegree
+
+- https://github.com/saadshamim01/FSND_Casting_Agency
+- https://github.com/saadshamim01/FSND
+- https://github.com/saadshamim01/FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS
+
 ### Udacity Flying Car and Autonomous Flight Engineer Nanodegree
 
  - [FCND-Term1-Starter-Kit](https://github.com/saadshamim01/FCND-Term1-Starter-Kit.git)
