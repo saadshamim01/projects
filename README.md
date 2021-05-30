@@ -6,28 +6,31 @@ I am a Full Stack Software Developer and machine-learning enthusiast. I am passi
 
 ## Projects
 
-### Udacity Deep Reinforcement Learning Nanodegree
+### Udacity - Deep Reinforcement Learning Nanodegree
 
 Link: [here](https://github.com/saadshamim01/udacity-deep-reinforcement-learning)
 
-### Udacity Intermediate Python Nanodegree
+### Udacity - Intermediate Python Nanodegree
 
 - [Explore Close Approaches for Near-Earth Objects](https://github.com/saadshamim01/udacity-near-earth-objects)
 - [Meme Generator](https://github.com/saadshamim01/udacity-meme-generator)
 
-### Udacity Full Stack Web Developer Nanodegree
+### Udacity - Full Stack Web Developer Nanodegree
 
-- https://github.com/saadshamim01/FSND_Casting_Agency
-- https://github.com/saadshamim01/FSND
-- https://github.com/saadshamim01/FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS
+- [Capstone Casting Agency](https://github.com/saadshamim01/udacity-fsnd-casting-agency)
+- [Trivia API and Starter Code](https://github.com/saadshamim01/udacity-fsnd)
+- [Flask API to a Kubernetes cluster (EKS)](https://github.com/saadshamim01/udacity-fsnd-flask-app-eks)
 
-### Udacity Flying Car and Autonomous Flight Engineer Nanodegree
+### Udacity - Flying Car and Autonomous Flight Engineer Nanodegree
 
- - [FCND-Term1-Starter-Kit](https://github.com/saadshamim01/FCND-Term1-Starter-Kit.git)
- - [FCND-Backyard-Flyer](https://github.com/saadshamim01/FCND-Backyard-Flyer.git)
- - [FCND-Motion-Planning](https://github.com/saadshamim01/FCND-Motion-Planning.git)
- - [FCND-Controls-CPP](https://github.com/saadshamim01/FCND-Controls-CPP.git)
- - [FCND-Estimation-CPP](https://github.com/saadshamim01/FCND-Estimation-CPP.git)
+ - [Backyard Flyer](https://github.com/saadshamim01/udacity-fcnd-backyard-flyer)
+ - [3D Motion Planning](https://github.com/saadshamim01/udacity-fcnd-motion-planning)
+ - [Cascade Controller for Quadrotors in C++](https://github.com/saadshamim01/udacity-fcnd-controls-cpp)
+ - [Estimation Controller using CPP simulator](https://github.com/saadshamim01/udacity-fcnd-estimation-cpp)
+
+### Udemy - The Complete iOS App Development Bootcamp
+
+Link: [here](https://github.com/saadshamim01/udemy-ios-app-development-bootcamp)
 
 ## ⚡ Tech Stack
 
@@ -44,8 +47,6 @@ Here are a few things I've picked up along my learning journey.
 
  ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 
- ![Blender](https://img.shields.io/badge/blender%20-%23F5792A.svg?&style=for-the-badge&logo=blender&logoColor=white)
-
  ![](https://img.shields.io/badge/Keras%20-%23D00000.svg?&style=for-the-badge&logo=Keras&logoColor=white) ![](https://img.shields.io/badge/pandas%20-%23150458.svg?&style=for-the-badge&logo=pandas&logoColor=white) ![](https://img.shields.io/badge/numpy%20-%23013243.svg?&style=for-the-badge&logo=numpy&logoColor=white)
 
  ![Docker](https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white) ![Jira](https://img.shields.io/badge/-Jira-000?&style=for-the-badge&logo=Jira-Software&logoColor=0052CC)
@@ -57,3 +58,4 @@ Here are a few things I've picked up along my learning journey.
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saad-shamim/)
 
  or give some ♥ on [mail](mailto:saadshamim01@gmail.com).
+
