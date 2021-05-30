@@ -6,9 +6,16 @@ I am a Full Stack Software Developer and machine-learning enthusiast. I am passi
 
 ## Projects
 
-Intermediate
+### Udacity Deep Reinforcement Learning Nanodegree
 
-### Flying Car and Autonomous Flight Engineer
+Link: [here](https://github.com/saadshamim01/udacity-deep-reinforcement-learning)
+
+### Udacity Intermediate Python Nanodegree
+
+- [Explore Close Approaches for Near-Earth Objects](https://github.com/saadshamim01/udacity-near-earth-objects)
+- [Meme Generator](https://github.com/saadshamim01/udacity-meme-generator)
+
+### Udacity Flying Car and Autonomous Flight Engineer Nanodegree
 
  - [FCND-Term1-Starter-Kit](https://github.com/saadshamim01/FCND-Term1-Starter-Kit.git)
  - [FCND-Backyard-Flyer](https://github.com/saadshamim01/FCND-Backyard-Flyer.git)
