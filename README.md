@@ -4,6 +4,17 @@ I am a Full Stack Software Developer and machine-learning enthusiast. I am passi
 
 #### 🔭 I’m currently looking for new opportunities.
 
+## Projects
+
+Intermediate
+
+### Flying Car and Autonomous Flight Engineer
+
+ - [FCND-Term1-Starter-Kit](https://github.com/saadshamim01/FCND-Term1-Starter-Kit.git)
+ - [FCND-Backyard-Flyer](https://github.com/saadshamim01/FCND-Backyard-Flyer.git)
+ - [FCND-Motion-Planning](https://github.com/saadshamim01/FCND-Motion-Planning.git)
+ - [FCND-Controls-CPP](https://github.com/saadshamim01/FCND-Controls-CPP.git)
+ - [FCND-Estimation-CPP](https://github.com/saadshamim01/FCND-Estimation-CPP.git)
 
 ## ⚡ Tech Stack
 
@@ -27,15 +38,6 @@ Here are a few things I've picked up along my learning journey.
  ![Docker](https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white) ![Jira](https://img.shields.io/badge/-Jira-000?&style=for-the-badge&logo=Jira-Software&logoColor=0052CC)
 
  ![](https://img.shields.io/badge/-Raspberry%20Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi) ![](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
- 
-## Projects
-
-### Flying Car and Autonomous Flight Engineer
- - [FCND-Term1-Starter-Kit](https://github.com/saadshamim01/FCND-Term1-Starter-Kit.git)
- - [FCND-Backyard-Flyer](https://github.com/saadshamim01/FCND-Backyard-Flyer.git)
- - [FCND-Motion-Planning](https://github.com/saadshamim01/FCND-Motion-Planning.git)
- - [FCND-Controls-CPP](https://github.com/saadshamim01/FCND-Controls-CPP.git)
- - [FCND-Estimation-CPP](https://github.com/saadshamim01/FCND-Estimation-CPP.git)
 
 
 ## 📫 Get in touch
