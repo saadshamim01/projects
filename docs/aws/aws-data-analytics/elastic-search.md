@@ -57,3 +57,15 @@
 
 #### Limitations
 
+- Can be launched private or public endpoint, not both.
+- Cant switch form VPC to public endpoint, vice-versa.
+- Domain cant be changed.
+- Installing Kibana, requires access to VPC.
+
+#### Pricing
+
+- Pay hourly ECS instance & EBS storage volume.
+
+- Reserved instance to reduce cost.
+
+  
