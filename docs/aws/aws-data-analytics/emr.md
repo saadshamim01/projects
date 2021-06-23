@@ -75,23 +75,4 @@
 #### Pricing
 
 - Per second , 1 minute minimum.
-
 - EMR price, EC2 price and EBS price (if attached)
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- 
