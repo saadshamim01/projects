@@ -19,4 +19,3 @@
 17. [DMS](https://aws.amazon.com/dms/)
 18. [Snowball and Direct Connect](https://aws.amazon.com/snowball/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc)
 19. [SageMaker](https://aws.amazon.com/sagemaker/)
-20. Security considerations for all above services
