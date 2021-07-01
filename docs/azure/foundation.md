@@ -112,9 +112,63 @@ Select instance -> Enable autoscaling -> Select limits, rules  & conditions -> C
 - Stores large amount of structured data.
 - Can also store unstructured data.
 
+**Virtual Machine**
+
+- Virtual machine is an emulation of computer system.
+- Provides similar function & architecture of physical system.
+- Specialized hardware, software can be selected.
+
+**Virtual Network (VNet)**
+
+- Acts as a communication channel between resources launched in the cloud.
+
+- Logical isolation of Azure cloud dedicated to your subscription.
+
+- Virtual network can be divided into subparts called subnets, which are further divided into Network Security Groups.
+
+  - -> VN
+    - -> Subnet
+      - -> Network Security Groups
+
+- Network Security Groups control the activity of compute instances.
+
+- It functions like a firewall controlling incoming/outgoing traffic.
+
+- STEPS
+
+  1. Create Network Security Group.
+
+  2. Create Virtual Network.
+
+  3. Create Webserver VM & Database VM.
+  4. Configure Network Security Groups for respective VMs.
+
+**Access Management**
+
+**Azure Active Directory**
+
+- It is Microsoft multi-tenant, cloud based directory and identity management service that combines core directory services, application access management, and identitiy protection into a single solution.
+- Basically handles all the sign in, allows single sign-on (SSO).
+- It incorporates the rules I set and allows the users access based on the permissions.
+- Simplifies signing in and identification process.
+- Offers developers to give access control to applications based on **centralized policy and rules.**
+
+**Windows AD vs Azure AD**
+
+- In Window AD: Various layers like Domain Services, Security Services etc -> Difficult to manage.
+- In Azure AD: All layers are combined into WAAD & Windows Azure Access Control Services.
+  - **WAAD**: Windows Azure Active Directory deals with identification management. Uses ldap for communications.
+  - **Windows Azure Access Control Services**: Communicating and federating all the organizations. Uses rest api for communications.
+
+**Azure Active Directory Editions**
+
+- Azure Active Tenants: Tenants ~ organization.
 
 
-ssdsdsdsdsds
+
+
+
+
 
 
 
