@@ -22,3 +22,22 @@ Allows users to query data from Amazon S3, without the need for clusters or data
 - Doesnt support **User defined functions**.
 - Athena supports querying data in Amazon S3 Requester Pays buckets.
 
+#### Steps
+
+- Create S3 bucket & object : REQUIRED
+- Create metadata database: OPTIONAL, doesnt store the data only stores metadata.
+- Create schema: REQUIRED
+- Fine tune the Serializer/ Deserializer (Serde): OPTIONAL
+- Run query : Its query not DML (Database Manipulation Language)
+- Access history: Results are cached for faster retrieval.
+
+#### Security
+
+- Control access using IAM policies, access control lists, S3 bucket policies.
+- If file in target S3 is encrypted, queries can be performed on ecrypted data.
+
+#### Pricing
+
+- Amount of data scanned.
+- Cost saving using paritioning or converting to columnare format ~ requires less data scanning.
+
