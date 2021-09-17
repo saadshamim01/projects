@@ -127,7 +127,6 @@ output "server_public_ip" {
 }
 
 # 8. Assign an elastic IP to the netork interface
-
 resource "aws_eip" "one" {
   vpc                       = true
   network_interface         = aws_network_interface.web-server-nic.id
