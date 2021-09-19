@@ -35,3 +35,19 @@ resource "aws_dynamodb_table" "student-stable" {
     attribute_name = "TimeToExist"
     enabled        = false
   }
+
+  global_secondary_index {
+    name               = "UserTitleIndex"
+    hash_key           = "StudentId"
+    range_key          = "Name"
+    write_capacity     = 10
+    read_capacity      = 10
+    projection_type    = "INCLUDE"
+    non_key_attributes = ["StudentId"]
+  }
+
+  tags = {
+    Name        = "dynamodb-table"
+    Environment = "Test"
+  }
+}
