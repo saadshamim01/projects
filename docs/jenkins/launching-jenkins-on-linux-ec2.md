@@ -22,5 +22,35 @@ sudo systemctl enable jenkins.service;
 sudo systemctl status jenkins.service;
 ```
 
+#### Additional Commands
+
+```
+sudo netstat -l
+curl localhost:8080
+
+# To get admin passowrd
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+#### To Uninstall Jenkins
+
+```
+sudo service jenkins stop sudo yum remove jenkins sudo rm -r /var/lib/jenkins 
+```
+
+#### To install Docker
+
+```
+sudo yum -y install docker;
+sudo systemctl start docker.service;
+sudo systemctl enable docker.service;
+```
+
+#### To install Git
+
+```
+sudo yum -y install git;
+```
+
 
 

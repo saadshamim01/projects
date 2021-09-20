@@ -1,0 +1,3 @@
+FROM amazonlinux
+RUN yum update -y
+RUN yum amazon-linux-extras -y install epel
