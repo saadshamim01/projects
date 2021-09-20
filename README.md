@@ -6,6 +6,10 @@ I am a Full Stack Software Developer and machine-learning enthusiast. I am passi
 
 ## Projects
 
+### DevOps Projects
+
+Link: [My DevOps Projects](https://github.com/saadshamim01/DevOps-Project)
+
 ### Udacity - Deep Reinforcement Learning Nanodegree
 
 Link: [here](https://github.com/saadshamim01/udacity-deep-reinforcement-learning)
@@ -30,7 +34,7 @@ Link: [here](https://github.com/saadshamim01/udacity-deep-reinforcement-learning
 
 ### Udemy - The Complete iOS App Development Bootcamp
 
-Link: [here](https://github.com/saadshamim01/udemy-ios-app-development-bootcamp)
+Link: [IOS Apps](https://github.com/saadshamim01/udemy-ios-app-development-bootcamp)
 
 ## ⚡ Tech Stack
 
