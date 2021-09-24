@@ -50,7 +50,15 @@ class User(db.Model):
     email=Column(String, unique=True)
     password=Column(String)
 
-
+class Planet(db.Model):
+    __tablename__= 'planets'
+    planet_id=Column(String, primary_key=True)
+    planet_naem=Column(String)
+    planet_type=Column(String)
+    home_star=Column(String)
+    mass=Column(Float)
+    radius=Column(Float)
+    distance=Column(Float)
 
 
 
