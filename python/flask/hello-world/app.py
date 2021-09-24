@@ -1,8 +1,9 @@
 from flask import Flask, jsonify, request
-
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import Column, Integer, Float, String
+import os
 
 app = Flask(__name__)
-
 
 @app.route('/')
 def hello_world():
@@ -21,6 +22,15 @@ def not_found():
 def parameters():
     name= request.args.get('name')
     age = int(request.args.get('age'))
+    if age < 18:
+        return jsonify(message = "Sorry " + name + " you are not old enough"), 401
+    else:
+        return jsonify(message = "Welcome " + name + " you are old enough"), 200
+
+
+# localhost:5000/url_variables/name/age
+@app.route('/url_variables/<string:name>/<int:age>')
+def url_variables(name: str, age: int):
     if age < 18:
         return jsonify(message = "Sorry " + name + " you are not old enough"), 401
     else:
