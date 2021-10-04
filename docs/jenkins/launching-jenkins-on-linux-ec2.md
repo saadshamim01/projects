@@ -47,3 +47,58 @@ Step 7: Reloading the system
 sudo systemctl daemon-reload;
 ```
 
+#### To start & stop Jenkins
+
+```
+sudo systemctl start jenkins.service;
+sudo systemctl enable jenkins.service;
+sudo systemctl status jenkins.service;
+```
+
+#### Additional Commands
+
+```
+sudo netstat -l
+curl localhost:8080
+
+# To get admin passowrd
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+#### To Uninstall Jenkins
+
+```
+sudo service jenkins stop sudo yum remove jenkins sudo rm -r /var/lib/jenkins 
+```
+
+#### To install Docker
+
+```
+sudo yum -y install docker;
+sudo systemctl start docker.service;
+sudo systemctl enable docker.service;
+```
+
+#### To install Git
+
+```
+sudo yum -y install git;
+```
+
+#### Adding jenkins and ec2-user to docker group
+
+```
+###Adding jenkins and ec2-user to docker group
+sudo usermod -a -G docker jenkins
+sudo usermod -a -G docker ec2-user
+```
+
+#### Testing
+
+```
+#Checking if permissions work or not
+sudo -u jenkins docker run hello-world
+```
+
+
+
