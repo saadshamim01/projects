@@ -4,52 +4,17 @@ Jenkins is **used to build and test your product continuously**, so developers c
 
 #### To install Jenkins on Linux
 
+Step 1: Install Extra Packages for Enterprise Linux (EPEL) repository to allow installation of packages that aren't available in standard repositories.
+
 ```
 sudo amazon-linux-extras install epel -y;
 sudo yum update -y;
+```
+
+Step 2: Install Jenkins Repository
+
+```
 sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo; 
-sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key;
-sudo yum upgrade -y;
-sudo yum install jenkins java-1.8.0-openjdk-devel -y;
-sudo systemctl daemon-reload;
-```
-
-#### To start & stop Jenkins
-
-```
-sudo systemctl start jenkins.service;
-sudo systemctl enable jenkins.service;
-sudo systemctl status jenkins.service;
-```
-
-#### Additional Commands
-
-```
-sudo netstat -l
-curl localhost:8080
-
-# To get admin passowrd
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-```
-
-#### To Uninstall Jenkins
-
-```
-sudo service jenkins stop sudo yum remove jenkins sudo rm -r /var/lib/jenkins 
-```
-
-#### To install Docker
-
-```
-sudo yum -y install docker;
-sudo systemctl start docker.service;
-sudo systemctl enable docker.service;
-```
-
-#### To install Git
-
-```
-sudo yum -y install git;
 ```
 
 
