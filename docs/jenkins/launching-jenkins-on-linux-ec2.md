@@ -17,5 +17,33 @@ Step 2: Install Jenkins Repository
 sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo; 
 ```
 
+Step 3: Adding Jenkins Organization Sign-In Key to allow trusted organization to install packages on the system.
 
+```
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key;
+```
+
+Step 4: Install Java 1.8.0
+
+```
+sudo yum install java-1.8.0-openjdk-devel -y;
+```
+
+Step 5: Install Jenkins
+
+```
+sudo yum install Jenkins -y;
+```
+
+Step 6: Upgrading the system
+
+```
+sudo yum upgrade -y;
+```
+
+Step 7: Reloading the system
+
+```
+sudo systemctl daemon-reload;
+```
 
