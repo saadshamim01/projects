@@ -1,5 +1,6 @@
 from tkinter.ttk import Progressbar
 from tkinter import *
+import time
 
 w = Tk()
 w.geometry('450x250')
@@ -24,7 +25,28 @@ def main_window():
     l1.place(x=200, y=125)
     q.mainloop()
 
-main_window()
+def bar():
+    l4 =Label(w, text='Loading...', fg = 'white', bg = '#249794')
+    lst4 = ('Calirbi (Body)', 10)
+    l4.configure(font=lst4)
+    l4.place(x=0, y=210)
+
+    r = 0
+    for i in range(100):
+        progress['value'] = r
+        w.update_idletasks()
+        time.sleep(0.03)
+        r = r + 1
+    w.destroy()
+    main_window()
+
+progress.place(x=-10, y=235)
+
+# Adding Frame
+Frame(w, width = 427, height = 241, bg = '#249794').place(x=0, y=0)
+b1.button(w, width = 10, height = 1, text = 'Get Started', command = bar, border = 0, fg = '#249794')
+b1.place(x=170, y=200)
+
 
 
 
