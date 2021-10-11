@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Replacing string
+    shell: |
+      grep -i -e "MNO" original.txt > copy.txt;
+      sed -i 's/ABC/DEF/g' copy.txt
