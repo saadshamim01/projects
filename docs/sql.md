@@ -210,3 +210,31 @@ Selects the first 50% of the records from the "Customers" table
 SELECT TOP 50 PERCENT * FROM Customers;
 ```
 
+**TOP WHERE**
+
+Select top where the condition is satisfied
+
+```sql
+SELECT * FROM Customers
+WHERE Country='Germany'
+LIMIT 3;
+```
+
+**MIN & MAX**
+
+```sql
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;
+
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT MAX(Price) AS LargestPrice
+FROM Products;
+```
+
