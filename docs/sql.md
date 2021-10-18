@@ -172,3 +172,41 @@ WHERE condition;
 UPDATE Customers
 SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
 WHERE CustomerID = 1;
+
+UPDATE Customers
+SET ContactName='Juan'
+WHERE Country='Mexico';
+```
+
+**DELETE**
+
+The `DELETE` statement is used to delete existing records in a table.
+
+```sql
+DELETE FROM table_name WHERE condition;
+```
+
+**TOP**
+
+The `SELECT TOP` clause is used to specify the number of records to return.
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
+
+SELECT TOP 3 * FROM Customers;
+
+SELECT * FROM Customers
+LIMIT 3;
+```
+
+**TOP PERCENT**
+
+Selects the first 50% of the records from the "Customers" table 
+
+```sql
+SELECT TOP 50 PERCENT * FROM Customers;
+```
+
