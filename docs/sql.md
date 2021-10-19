@@ -132,7 +132,7 @@ ORDER BY Country ASC, CustomerName DESC;
 
 ```
 
-**INSERT**
+#### **INSERT**
 
 The `INSERT INTO` statement is used to insert new records in a table.
 
@@ -144,7 +144,7 @@ INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Cou
 VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
 ```
 
-**NULL**
+###### **NULL**
 
 It is not possible to test for NULL values with comparison operators, such as =, <, or <>.
 
@@ -160,7 +160,7 @@ FROM table_name
 WHERE column_name IS NOT NULL;
 ```
 
-**UPDATE**
+#### **UPDATE**
 
 The `UPDATE` statement is used to modify the existing records in a table.
 
@@ -178,63 +178,5 @@ SET ContactName='Juan'
 WHERE Country='Mexico';
 ```
 
-**DELETE**
 
-The `DELETE` statement is used to delete existing records in a table.
-
-```sql
-DELETE FROM table_name WHERE condition;
-```
-
-**TOP**
-
-The `SELECT TOP` clause is used to specify the number of records to return.
-
-```sql
-SELECT column_name(s)
-FROM table_name
-WHERE condition
-LIMIT number;
-
-SELECT TOP 3 * FROM Customers;
-
-SELECT * FROM Customers
-LIMIT 3;
-```
-
-**TOP PERCENT**
-
-Selects the first 50% of the records from the "Customers" table 
-
-```sql
-SELECT TOP 50 PERCENT * FROM Customers;
-```
-
-**TOP WHERE**
-
-Select top where the condition is satisfied
-
-```sql
-SELECT * FROM Customers
-WHERE Country='Germany'
-LIMIT 3;
-```
-
-**MIN & MAX**
-
-```sql
-SELECT MIN(column_name)
-FROM table_name
-WHERE condition;
-
-SELECT MIN(Price) AS SmallestPrice
-FROM Products;
-
-SELECT MAX(column_name)
-FROM table_name
-WHERE condition;
-
-SELECT MAX(Price) AS LargestPrice
-FROM Products;
-```
 
