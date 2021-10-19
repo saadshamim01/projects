@@ -401,5 +401,189 @@ WHERE Customers.CustomerName='Around the Horn' AND Customers.CustomerID=Orders.C
 
 ```
 
+#### SQL JOIN
 
+A `JOIN` clause is used to combine rows from two or more tables, based on a related column between them.
+
+###### INNER JOIN
+
+```sql
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+```
+
+```sql
+SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+FROM ((Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID);
+```
+
+###### LEFT JOIN
+
+```sql
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+
+```sql
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+ORDER BY Customers.CustomerName;
+```
+
+###### RIGHT JOIN
+
+```sql
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+
+```sql
+SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+FROM Orders
+RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+ORDER BY Orders.OrderID;
+```
+
+FULL JOIN
+
+```sql
+SELECT column_name(s)
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column_name = table2.column_name
+WHERE condition;
+```
+
+###### SELF JOIN
+
+A self join is a regular join, but the table is joined with itself.
+
+```sql
+SELECT column_name(s)
+FROM table1 T1, table1 T2
+WHERE condition;
+```
+
+```sql
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City;
+```
+
+###### UNION
+
+The `UNION` operator is used to combine the result-set of two or more `SELECT` statements.
+
+- Every `SELECT` statement within `UNION` must have the same number of columns
+- The columns must also have similar data types
+- The columns in every `SELECT` statement must also be in the same order
+
+```sql
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2;
+
+SELECT 'Customer' AS Type, ContactName, City, Country
+FROM Customers
+UNION
+SELECT 'Supplier', ContactName, City, Country
+FROM Suppliers;
+```
+
+The `UNION` operator selects only distinct values by default. To allow duplicate values, use `UNION ALL`:
+
+```sql
+SELECT column_name(s) FROM table1
+UNION ALL
+SELECT column_name(s) FROM table2;
+
+SELECT City, Country FROM Customers
+WHERE Country='Germany'
+UNION ALL
+SELECT City, Country FROM Suppliers
+WHERE Country='Germany'
+ORDER BY City;
+```
+
+
+
+#### Procedures
+
+A stored procedure is a prepared SQL code that you can save, so the code can be reused over and over again.
+
+###### Stored Procedure Syntax
+
+```sql
+CREATE PROCEDURE procedure_name
+AS
+sql_statement
+GO;
+```
+
+###### Execute a Stored Procedure
+
+```
+EXEC procedure_name;
+```
+
+###### Stored Procedure With One Parameter
+
+```sql
+CREATE PROCEDURE SelectAllCustomers @City nvarchar(30)
+AS
+SELECT * FROM Customers WHERE City = @City
+GO;
+```
+
+###### Execution
+
+```sql
+EXEC SelectAllCustomers @City = 'London';
+```
+
+###### Stored Procedure With Multiple Parameters
+
+```sql
+CREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10)
+AS
+SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode
+GO;
+```
+
+###### Execution
+
+```sql
+EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA1 1DP';
+```
+
+###### Renaming Procedures
+
+```sql
+sp_rename 'GetProductDesc','GetProductDesc_new'
+```
+
+#### Comments
+
+Single line comments start with `--`.
+
+Multi-line comments start with `/*` and end with `*/`.
+
+```
+--Select all:
+
+/*Select all the columns
+of all the records
+in the Customers table:*/
+```
 
