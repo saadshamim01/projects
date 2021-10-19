@@ -178,5 +178,228 @@ SET ContactName='Juan'
 WHERE Country='Mexico';
 ```
 
+#### **DELETE**
+
+The `DELETE` statement is used to delete existing records in a table.
+
+```sql
+DELETE FROM table_name WHERE condition;
+```
+
+###### **TOP**
+
+The `SELECT TOP` clause is used to specify the number of records to return.
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
+
+SELECT TOP 3 * FROM Customers;
+
+SELECT * FROM Customers
+LIMIT 3;
+```
+
+###### **TOP PERCENT**
+
+Selects the first 50% of the records from the "Customers" table 
+
+```sql
+SELECT TOP 50 PERCENT * FROM Customers;
+```
+
+###### **TOP WHERE**
+
+Select top where the condition is satisfied
+
+```sql
+SELECT * FROM Customers
+WHERE Country='Germany'
+LIMIT 3;
+```
+
+###### **MIN & MAX**
+
+```sql
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;
+
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT MAX(Price) AS LargestPrice
+FROM Products;
+```
+
+#### COUNT(), AVG() and SUM() Functions
+
+The `COUNT()` function returns the number of rows that matches a specified criterion.
+
+The `AVG()` function returns the average value of a numeric column. 
+
+The `SUM()` function returns the total sum of a numeric column. 
+
+```sql
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
+```
+
+```sql
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
+```
+
+```sql
+SELECT SUM(column_name)
+FROM table_name
+WHERE condition;
+
+```
+
+#### SQL LIKE Operator
+
+The `LIKE` operator is used in a `WHERE` clause to search for a specified pattern in a column.
+
+There are two wildcards often used in conjunction with the `LIKE` operator:
+
+-  The percent sign (%) represents zero, one, or multiple characters
+-  The underscore sign (_) represents one, single character
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE pattern;
+```
+
+| LIKE Operator                  | Description                                                  |
+| :----------------------------- | :----------------------------------------------------------- |
+| WHERE CustomerName LIKE 'a%'   | Finds any values that start with "a"                         |
+| WHERE CustomerName LIKE '%a'   | Finds any values that end with "a"                           |
+| WHERE CustomerName LIKE '%or%' | Finds any values that have "or" in any position              |
+| WHERE CustomerName LIKE '_r%'  | Finds any values that have "r" in the second position        |
+| WHERE CustomerName LIKE 'a_%'  | Finds any values that start with "a" and are at least 2 characters in length |
+| WHERE CustomerName LIKE 'a__%' | Finds any values that start with "a" and are at least 3 characters in length |
+| WHERE ContactName LIKE 'a%o'   | Finds any values that start with "a" and ends with "o"       |
+
+```sql
+SELECT * FROM Customers
+WHERE CustomerName NOT LIKE 'a%';
+```
+
+#### WildCard
+
+A wildcard character is used to substitute one or more characters in a string.
+
+Wildcard characters are used with the `LIKE` operator. The `LIKE` operator is used in a `WHERE` clause to search for a specified pattern in a column.
+
+| Symbol | Description                                                | Example                                                      |
+| :----- | :--------------------------------------------------------- | :----------------------------------------------------------- |
+| *      | Represents zero or more characters                         | bl* finds bl, black, blue, and blob                          |
+| ?      | Represents a single character                              | h?t finds hot, hat, and hit                                  |
+| []     | Represents any single character within the brackets        | h[oa]t finds hot and hat, but not hit                        |
+| !      | Represents any character not in the brackets               | h[!oa]t finds hit, but not hot and hat                       |
+| -      | Represents any single character within the specified range | c[a-b]t finds cat and cbt                                    |
+| #      | Represents any single numeric character                    | 2#5 finds 205, 215, 225, 235, 245, 255, 265, 275, 285, and 295 |
+
+| Symbol | Description                                                | Example                                |
+| :----- | :--------------------------------------------------------- | :------------------------------------- |
+| %      | Represents zero or more characters                         | bl% finds bl, black, blue, and blob    |
+| _      | Represents a single character                              | h_t finds hot, hat, and hit            |
+| []     | Represents any single character within the brackets        | h[oa]t finds hot and hat, but not hit  |
+| ^      | Represents any character not in the brackets               | h[^oa]t finds hit, but not hot and hat |
+| -      | Represents any single character within the specified range | c[a-b]t finds cat and cbt              |
+
+#### IN Operator
+
+The `IN` operator allows you to specify multiple values in a `WHERE` clause.
+
+The `IN` operator is a shorthand for multiple `OR` conditions.
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1, value2, ...);
+
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');
+
+SELECT * FROM Customers
+WHERE Country NOT IN ('Germany', 'France', 'UK');
+```
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (SELECT STATEMENT);
+
+SELECT * FROM Customers
+WHERE Country IN (SELECT Country FROM Suppliers);
+```
+
+#### SQL BETWEEN Operator
+
+The `BETWEEN` operator selects values within a given range. The values can be numbers, text, or dates.
+
+The `BETWEEN` operator is inclusive: begin and end values are included. 
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+
+
+```
+
+```sql
+SELECT * FROM Products
+WHERE Price BETWEEN 10 AND 20;
+
+SELECT * FROM Products
+WHERE Price NOT BETWEEN 10 AND 20;
+
+SELECT * FROM Products
+WHERE ProductName NOT BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni'
+ORDER BY ProductName;
+
+SELECT * FROM Orders
+WHERE OrderDate BETWEEN #07/01/1996# AND #07/31/1996#;
+
+SELECT * FROM Orders
+WHERE OrderDate BETWEEN '1996-07-01' AND '1996-07-31';
+```
+
+#### Aliases
+
+SQL aliases are used to give a table, or a column in a table, a temporary name.
+
+````sql
+SELECT column_name AS alias_name
+FROM table_name;
+
+SELECT column_name(s)
+FROM table_name AS alias_name;
+````
+
+```sql
+SELECT o.OrderID, o.OrderDate, c.CustomerName
+FROM Customers AS c, Orders AS o
+WHERE c.CustomerName='Around the Horn' AND c.CustomerID=o.CustomerID;
+
+-- without alias
+SELECT Orders.OrderID, Orders.OrderDate, Customers.CustomerName
+FROM Customers, Orders
+WHERE Customers.CustomerName='Around the Horn' AND Customers.CustomerID=Orders.CustomerID;
+
+```
+
 
 
