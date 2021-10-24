@@ -9,6 +9,8 @@ Python has 4 collection data types:
 
 It also has specialized data structures which basically covers for the shortcomings of the four data types:
 
+---
+
 **namedtuple( )**
 
 - Returns a tuple with a named entry, which means there will be a name assigned to each value in the tuple.
@@ -25,6 +27,8 @@ print(s)
 # From List
 s.make(['Tom', 23])
 ```
+
+---
 
 **deque**
 
@@ -47,14 +51,15 @@ a1.popLeft()
 
 ```
 
+**chainmap**
 
 
-1. Chainmap
-2. Counter
-3. OrderedDict
-4. defaultdict
-5. UserDict
-6. UserList
-7. UserString
+
+1. Counter
+2. OrderedDict
+3. defaultdict
+4. UserDict
+5. UserList
+6. UserString
 
  
