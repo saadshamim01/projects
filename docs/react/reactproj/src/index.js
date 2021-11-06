@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Form from './form.jsx';
+import COMP_LIFE from './form.jsx';
 
 ReactDOM.render(
-    <Form />,
+    <COMP_LIFE />,
     document.getElementById('root')
 );
