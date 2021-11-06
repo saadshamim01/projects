@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import h1tag from './test.jsx';
+// import Hello_comp from './test.jsx';
+import HelloWorld from './test.jsx';
 
-ReactDOM.render(h1tag,
-    document.getElementById('root')
-);
+
+ReactDOM.render(<HelloWorld />,
+                document.getElementById('root')
+    );
+
