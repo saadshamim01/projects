@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
-//function Hello(){
-//    return <h1> Hello world using function</h1>
-//}
-//const Hello_comp = <Hello/>;
-
-class HelloWorld extends React. Component{
-    render (){
-        return <h2> Hello world using class</h2>
+class Hello extends React. Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            message: "Hello World"
+        }
     }
-
+    render (){
+        return <h1> {this.state.message}</h1>
+    }
 }
 
-export default HelloWorld;
+

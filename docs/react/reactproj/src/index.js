@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import Hello_comp from './test.jsx';
-import HelloWorld from './test.jsx';
+import Hello from './test.jsx';
 
 
-ReactDOM.render(<HelloWorld />,
+ReactDOM.render(<Hello />,
                 document.getElementById('root')
     );
 
