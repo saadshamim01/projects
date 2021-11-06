@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import h1tag from './test.jsx';
 
-ReactDOM.render(
-<h1>Hello World!</h1>,
+ReactDOM.render(h1tag,
     document.getElementById('root')
 );
