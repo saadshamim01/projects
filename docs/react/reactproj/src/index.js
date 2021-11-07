@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import COMP_LIFE from './form.jsx';
+import Hello_comp from './addstyle.jsx';
+
+
 
 ReactDOM.render(
-    <COMP_LIFE />,
+    Hello_comp,
     document.getElementById('root')
 );
