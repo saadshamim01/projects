@@ -3,6 +3,7 @@ import Header from "./Header";
 import Home from "./Home";
 import Checkout from "./Checkout";
 import Login from "./Login";
+import Orders from "./Orders.js";
 import Payment from "./Payment";
 import { auth } from "./firebase";
 
@@ -47,6 +48,7 @@ function App() {
           <Route path="/login" element={[<Login />]} />
 
           <Route path="/checkout" element={[<Header />, <Checkout />]} />
+          <Route path="/orders" element={[<Header />, <Orders />]} />
           <Route
             path="/payment"
             element={[
