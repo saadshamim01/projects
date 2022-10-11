@@ -1,0 +1,42 @@
+- name: Maintain Github Repositories
+  hosts: localhost
+
+  tasks:
+    - name: Create ~/Documents/github-repos
+      ansible.builtin.file:
+        path: ~/Documents/github-repos
+        state: directory
+        owner: '{{ ansible_user_uid }}'
+        group: '{{ ansible_user_gid }}'
+        mode: '0755'
+
+    - name: Clone Github Repos
+      ansible.builtin.git:
+        repo: git@github.com:{{ item.repo }}.git
+        dest: ~/Documents/github-repos/{{ item.repo }}
+        force: true
+        single_branch: true
+        version: '{{ item.version }}'
+      async: 120
+      poll: 1
+      loop:
+        - { 'repo': 'nawaidshamim/automata', 'version': 'master' }
+        - { 'repo': 'nawaidshamim/tensorflow-certification', 'version': 'master' }
+        - { 'repo': 'nawaidshamim/yasminshifa', 'version': 'master' }
+        - { 'repo': 'saadshamim01/ci-cd-ansible', 'version': 'main' }
+        - { 'repo': 'saadshamim01/ci-cd-github-actions', 'version': 'main' }
+        - { 'repo': 'saadshamim01/ci-cd-tomcat', 'version': 'main' }
+        - { 'repo': 'saadshamim01/ci_cd', 'version': 'main' }
+        - { 'repo': 'saadshamim01/DevOps-Project', 'version': 'main' }
+        - { 'repo': 'saadshamim01/django-food-recipe-api', 'version': 'main' }
+        - { 'repo': 'saadshamim01/docker-java-jenkins-integration', 'version': 'main' }
+        - { 'repo': 'saadshamim01/docker-test', 'version': 'main' }
+        - { 'repo': 'saadshamim01/ecommerce-django-react', 'version': 'main' }
+        - { 'repo': 'saadshamim01/flask-docker', 'version': 'main' }
+        - { 'repo': 'saadshamim01/in-process', 'version': 'main' }
+        - { 'repo': 'saadshamim01/musician-app', 'version': 'master' }
+        - { 'repo': 'saadshamim01/nodejs-docker-jenkins', 'version': 'main' }
+        - { 'repo': 'saadshamim01/projects', 'version': 'main' }
+        - { 'repo': 'saadshamim01/saadshamim01', 'version': 'main' }
+        - { 'repo': 'saadshamim01/terraform', 'version': 'main' }
+        - { 'repo': 'saadshamim01/tomcat-server', 'version': 'main' }
