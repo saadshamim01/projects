@@ -1,0 +1,11 @@
+version: '3.9'
+
+
+services:
+  nginx:
+    image: nginx:stage-alpine
+  mysql:
+    image: mysql:latest
+  php:
+    image: php:7.4-fpm-alpine
+
